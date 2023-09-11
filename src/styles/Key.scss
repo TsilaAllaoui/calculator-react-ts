@@ -9,7 +9,25 @@
   font-weight: 900;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: transform 250ms, box-shadow 250ms;
+  transition: transform 250ms, box-shadow 250ms, filter 250ms;
+
+  @media (max-width: 428px) {
+    margin: 0.25rem;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  @media (max-width: 360px) {
+    margin: 0.5rem;
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+
+  // @media (max-width: 412px) {
+  //   margin: 0.5rem;
+  //   height: 4rem;
+  //   width: 4rem;
+  // }
 
   p {
     user-select: none;

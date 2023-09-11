@@ -7,11 +7,25 @@
   justify-content: center;
   align-items: center;
   font-family: "Josefin";
+  margin-top: 10rem;
+
+  @media (max-width: 428px) {
+    margin: 0 auto;
+    width: 95%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  @media (max-width: 416px) {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 #app {
   width: 30rem;
-  height: 80vh;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +41,7 @@
     height: 10%;
     font-weight: 900;
 
-    > p {
+    >p {
       font-size: 2rem;
     }
 
@@ -37,7 +51,7 @@
       justify-content: flex-end;
       gap: 1rem;
 
-      > p {
+      >p {
         margin: 0;
         font-size: 0.75rem;
       }
@@ -66,7 +80,6 @@
           height: 1rem;
           width: 2.5rem;
           border-radius: 0.75rem;
-          // padding: 0.1rem 0.25rem;
           padding: 1px;
           background-color: rgb(37, 45, 68);
           display: flex;
@@ -101,14 +114,22 @@
     background-color: rgb(24, 31, 50);
     border-radius: 0.5rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    margin: 0 auto;
     transition: color 500ms;
 
+    @media (max-width: 428px) {
+      width: 95vw;
+    }
+
     p {
-      margin: 0;
-      margin-right: 2rem;
+      text-align: end;
+      width: 100%;
+      margin: 0 1rem;
       font-size: 2rem;
+      overflow-x: auto;
+      scrollbar-width: thin;
     }
   }
 
@@ -121,6 +142,13 @@
     flex-basis: 100%;
     flex-wrap: wrap;
 
+    @media (max-width: 428px) {
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 0.5rem;
+      padding: 1rem 0;
+    }
+
     #buttons {
       width: 100%;
       display: flex;
@@ -129,6 +157,8 @@
 
       #key {
         width: 80%;
+
+
       }
 
       #reset,

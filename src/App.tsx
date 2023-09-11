@@ -82,6 +82,11 @@ function App() {
     setTheme(themes[0]);
   }, []);
 
+  useEffect(() => {
+    const resultTag = document.querySelector("#result > p") as HTMLElement;
+    resultTag.scrollLeft = resultTag.scrollWidth
+  }, [result])
+
   return (
     <div id="app">
       <div id="header">

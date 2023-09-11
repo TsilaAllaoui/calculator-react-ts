@@ -39,12 +39,21 @@ const Key = ({ item }: { item: IKey }) => {
         console.log("Error when evaluation: " + e);
       }
     } else if (item.content == "DEL") {
+      if (result == "Infinity") {
+        setResult("");
+        return;
+      }
       const val = result.toString().slice(0, -1);
       setResult(val);
     } else {
+      if (result == "Infinity") {
+        setResult(item.content);
+        return;
+      }
       const val = result + item.content;
       setResult(val);
     }
+    keyRef.current!.style.filter = "brightness(75%)";
     keyRef.current!.style.boxShadow =
       "rgba(" +
       item.bgColor.slice(3, item.bgColor.length - 1) +
@@ -58,6 +67,7 @@ const Key = ({ item }: { item: IKey }) => {
         ", 0.5)" +
         " 0px 5px";
       keyRef.current!.style.transform = "translateY(0)";
+      keyRef.current!.style.filter = "unset"
     }, 250);
   };
   return (
