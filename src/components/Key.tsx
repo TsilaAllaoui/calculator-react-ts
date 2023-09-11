@@ -77,7 +77,7 @@ const Key = ({ item }: { item: IKey }) => {
       style={{
         color: item.color,
         backgroundColor: item.bgColor,
-        boxShadow: item.shadow + " 0 5px", //"0 5px " + "rgba(" + item.bgColor.slice(4, -1) + ", 0.5)",
+        boxShadow: item.shadow + " 0 5px",
       }}
       onClick={handleClick}
     >
