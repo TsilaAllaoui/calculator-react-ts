@@ -1,0 +1,17 @@
+#key {
+  width: 18%;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 250ms, box-shadow 250ms;
+
+  p {
+    user-select: none;
+  }
+}
