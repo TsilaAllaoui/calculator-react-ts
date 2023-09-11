@@ -45,14 +45,14 @@ const Key = ({ item }: { item: IKey }) => {
     }
     keyRef.current!.style.boxShadow =
       "rgba(" +
-      item.bgColor.slice(4, item.bgColor.length - 1) +
+      item.bgColor.slice(3, item.bgColor.length - 1) +
       ", 0.5)" +
       " 0px 2px";
     keyRef.current!.style.transform = "translateY(3px)";
     setTimeout(() => {
       keyRef.current!.style.boxShadow =
         "rgba(" +
-        item.bgColor.slice(4, item.bgColor.length - 1) +
+        item.bgColor.slice(3, item.bgColor.length - 1) +
         ", 0.5)" +
         " 0px 5px";
       keyRef.current!.style.transform = "translateY(0)";
@@ -65,11 +65,7 @@ const Key = ({ item }: { item: IKey }) => {
       style={{
         color: item.color,
         backgroundColor: item.bgColor,
-        boxShadow:
-          "0 5px " +
-          "rgba(" +
-          item.bgColor.slice(4, item.bgColor.length - 1) +
-          ", 0.5)",
+        boxShadow: item.shadow + " 0 5px", //"0 5px " + "rgba(" + item.bgColor.slice(4, -1) + ", 0.5)",
       }}
       onClick={handleClick}
     >
