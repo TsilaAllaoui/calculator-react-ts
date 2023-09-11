@@ -3,7 +3,6 @@ import "./App.scss";
 import Key from "./components/Key";
 import { ResultContext } from "./contexts/result";
 import { ThemeContext } from "./contexts/theme";
-import { IKey } from "./interfaces/key";
 import { ITheme } from "./interfaces/theme";
 
 function App() {

@@ -8,7 +8,9 @@ const Key = ({ item }: { item: IKey }) => {
   const { result, setResult } = useContext(ResultContext);
   const keyRef = useRef<HTMLDivElement>(null);
   const showError = (oldVal: string) => {
-    const resultElement = document.querySelector("#result") as HTMLDivElement;
+    const resultElement = document.querySelector(
+      "#result > p"
+    ) as HTMLDivElement;
     resultElement.style.color = "red";
     setIsPending(true);
     setTimeout(() => {
@@ -27,7 +29,7 @@ const Key = ({ item }: { item: IKey }) => {
       const oldVal = result;
       try {
         setResult(eval(result.replace("x", "*")));
-        if ("0/0") {
+        if (result == "0/0") {
           setResult("Math Error");
           showError(oldVal);
         }
