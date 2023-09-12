@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Josefin";
-  margin-top: 10rem;
+  margin-top: 5vh;
 
   @media (max-width: 428px) {
     margin: 0 auto;
@@ -41,7 +41,7 @@
     height: 10%;
     font-weight: 900;
 
-    >p {
+    > p {
       font-size: 2rem;
     }
 
@@ -51,7 +51,7 @@
       justify-content: flex-end;
       gap: 1rem;
 
-      >p {
+      > p {
         margin: 0;
         font-size: 0.75rem;
       }
@@ -157,8 +157,6 @@
 
       #key {
         width: 80%;
-
-
       }
 
       #reset,
